@@ -9,9 +9,9 @@ import Foundation
 
 /// Representa uma cidade com suas coordenadas geográficas e nome do país.
 struct City: Identifiable {
-    var id = UUID()  // Identificador único para cada cidade
-    var name: String  // Nome da cidade
-    var country: String  // Nome do país
-    var latitude: Double  // Latitude da cidade
-    var longitude: Double  // Longitude da cidade
+    var id = UUID()  
+    var name: String
+    var country: String
+    var latitude: Double
+    var longitude: Double
 }

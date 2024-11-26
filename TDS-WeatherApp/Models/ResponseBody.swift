@@ -9,26 +9,26 @@ import Foundation
 
 /// Estrutura que mapeia a resposta do clima retornada pela API.
 struct ResponseBody: Decodable {
-    var weather: [WeatherResponse]  // Lista de condições climáticas (ex: chuva, sol)
-    var main: MainResponse  // Dados principais sobre o clima (temperatura, umidade)
-    var wind: WindResponse  // Dados sobre o vento
-    var name: String  // Nome da cidade (útil para exibição ou localização futura)
-    var sys: SysResponse  // Dados adicionais do sistema, como sunrise e sunset
+    var weather: [WeatherResponse]
+    var main: MainResponse
+    var wind: WindResponse
+    var name: String
+    var sys: SysResponse
     
     /// Submodel que descreve a condição climática.
     struct WeatherResponse: Decodable {
-        var main: String  // Tipo de clima (ex: "Clear", "Rain")
-        var description: String  // Descrição detalhada (ex: "Céu limpo", "Chuva leve")
-        var icon: String  // Ícone representando o clima (usado para exibição gráfica)
+        var main: String
+        var description: String
+        var icon: String
     }
     
     /// Submodel para os dados principais do clima, como temperatura e umidade.
     struct MainResponse: Decodable {
-        var temp: Double  // Temperatura atual
-        var feels_like: Double  // Temperatura percebida (sensação térmica)
-        var temp_min: Double  // Temperatura mínima
-        var temp_max: Double  // Temperatura máxima
-        var humidity: Double  // Umidade do ar
+        var temp: Double
+        var feels_like: Double
+        var temp_min: Double
+        var temp_max: Double
+        var humidity: Double
         
         // Propriedades convenientes para facilitar o acesso aos valores com nomes mais legíveis
         var feelsLike: Double { return feels_like }
@@ -38,13 +38,13 @@ struct ResponseBody: Decodable {
     
     /// Submodel que descreve os dados do vento, como a velocidade.
     struct WindResponse: Decodable {
-        var speed: Double  // Velocidade do vento em metros por segundo
+        var speed: Double  
     }
     
     /// Submodel que descreve dados do sistema, como o horário do nascer e do pôr do sol.
     struct SysResponse: Decodable {
-        var sunrise: Int  // Timestamp UNIX do nascer do sol
-        var sunset: Int   // Timestamp UNIX do pôr do sol
+        var sunrise: Int
+        var sunset: Int
     }
 }
 

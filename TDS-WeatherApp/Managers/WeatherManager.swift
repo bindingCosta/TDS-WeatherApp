@@ -50,12 +50,12 @@ class WeatherManager {
 
 /// Estrutura para previsão detalhada de clima.
 struct ForecastResponse: Decodable {
-    var list: [ForecastItem]  // Itens de previsão (cada previsão por hora/dia)
+    var list: [ForecastItem]
     
     struct ForecastItem: Decodable {
-        var dt: TimeInterval  // Data e hora da previsão
-        var main: ResponseBody.MainResponse  // Dados principais (temperatura, etc.)
-        var weather: [ResponseBody.WeatherResponse]  // Condições climáticas (chuva, neve, etc.)
+        var dt: TimeInterval  
+        var main: ResponseBody.MainResponse
+        var weather: [ResponseBody.WeatherResponse]
     }
 }
 

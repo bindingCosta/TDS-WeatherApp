@@ -7,14 +7,14 @@
 
 import SwiftUI
 
-// MARK: - Tela de Detalhes do Clima
+// MARK: - Tela de informaçoes do clima
 struct WeatherDetailView: View {
     @ObservedObject var viewModel: WeatherViewModel
     var city: City
 
     var body: some View {
         ZStack {
-            // MARK: - Fundo Dinâmico
+            // MARK: - Fundo dinâmico
             if let weatherCondition = viewModel.weatherData?.weather.first?.main {
                 getGradientBackground(for: weatherCondition.localizedWeatherCondition())
                     .ignoresSafeArea()
@@ -173,7 +173,7 @@ struct WeatherDetailView: View {
     func formatTimestamp(_ timestamp: Int) -> String {
         let date = Date(timeIntervalSince1970: TimeInterval(timestamp))
         let formatter = DateFormatter()
-        formatter.dateFormat = "h:mm a" // Exemplo: "5:14 AM"
+        formatter.dateFormat = "h:mm a"
         return formatter.string(from: date)
     }
 }
@@ -182,13 +182,13 @@ struct WeatherDetailView: View {
 func getHourlyWeatherIcon(for condition: String, timeOfDay: String) -> String {
     switch timeOfDay {
     case "dawn":
-        return "sunrise" // Ícone de amanhecer
+        return "sunrise"
     case "morning":
-        return "sun.max" // Ícone de sol
+        return "sun.max"
     case "afternoon":
-        return "cloud.sun" // Ícone de sol com nuvem
+        return "cloud.sun"
     case "night":
-        return "moon.stars" // Ícone de lua
+        return "moon.stars"
     default:
         return "cloud"
     }

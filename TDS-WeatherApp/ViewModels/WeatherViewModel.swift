@@ -8,8 +8,8 @@
 import Foundation
 
 class WeatherViewModel: ObservableObject {
-    @Published var weatherData: ResponseBody? // Dados do clima atual
-    @Published var hourlyForecasts: [HourlyForecast] = [] // Previsões horárias
+    @Published var weatherData: ResponseBody? 
+    @Published var hourlyForecasts: [HourlyForecast] = []
 
     /// Busca os dados climáticos para a cidade.
     func fetchWeatherData(for city: City) async {
