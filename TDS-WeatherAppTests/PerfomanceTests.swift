@@ -14,23 +14,22 @@ class PerformanceTests: XCTestCase {
 
             Task {
                 do {
-                    // Espera pela execução da função assíncrona
+
                     let _ = try await weatherManager.getCurrentWeather(latitude: latitude, longitude: longitude)
                     
-                    // Chama a expectativa após a conclusão do código assíncrono
+
                     DispatchQueue.main.async {
-                        expectation.fulfill() // Marca a expectativa como cumprida
+                        expectation.fulfill() 
                     }
                 } catch {
                     XCTFail("Falha ao buscar os dados do clima: \(error)")
                     DispatchQueue.main.async {
-                        expectation.fulfill() // Marca a expectativa como cumprida em caso de erro também
+                        expectation.fulfill() 
                     }
                 }
             }
         }
         
-        // Espera pela expectativa ser cumprida dentro do tempo limite
         waitForExpectations(timeout: 10, handler: nil)
     }
 }
