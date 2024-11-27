@@ -52,7 +52,7 @@ Valeu demais pelo desafio proposto e pelo tempo separado para a formulação des
 Eu decidi seguir as descrições e backgrounds mandados por voces no layout, por isso eu só adicionei 4 de cada: sunny, rainy, snowy e o misty com um fundo default. Acho que seria interessante termos também o clear com um background diferente, mas como não continha no layout, preferi não modificar nada.
 
 
-A WeatherDetailView é tela princpal do app, trazendo todos os dados dinâmicos de clima e etc. Como é observado no código, todos os dados são **dinâmicos**, mas por algum motivo, a API às vezes não traze os dados corretos de temperatura máxima e mínima de algumas cidades, como Recife, por exemplo. É claro que a lógica não é a culpada por isso, pois outras cidades como Vancouver e Londres sempre mostram suas temperaturas máximas e mínimas corretas.
+A WeatherDetailView é tela princpal do app, trazendo todos os dados dinâmicos de clima e etc. Como é observado no código, todos os dados são **dinâmicos**, mas por algum motivo, a API às vezes não traz os dados corretos de temperatura máxima e mínima de algumas cidades, como Recife, por exemplo. É claro que a lógica não é a culpada por isso, pois outras cidades como Vancouver e Londres sempre mostram suas temperaturas máximas e mínimas corretas.
 
 Com relação aos testes de dados, testei a parte mais vital de carregando de dados da API, garantindo que a cidade/infos carregadas serão as corretas, de acordo com as coordernadas enviadas à API.
 
